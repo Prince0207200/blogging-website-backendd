@@ -22,6 +22,12 @@ app.use("/api", require("../routes/userRoutes"));
 
 app.use("/api/articles", require("../routes/articleRoutes"));
 
+//tag routes
+
+app.use("/api/tags", require("../routes/tagRoutes"));
+
+app.use("/api/articles", require("../routes/commentRoutes"));
+
 
 mongoose.connection.once("open", () => {
   console.log("Connected to MongoDB");
